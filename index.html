@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>DevFolio Bootstrap Template</title>
+  <title>Tushar Portfolio</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -58,19 +58,19 @@
             <a class="nav-link js-scroll active" href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
+            <a class="nav-link js-scroll" onclick="location.href='#section-portfolio'"  href="#about">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Services</a>
+            <a class="nav-link js-scroll" onclick="location.href='#about-section'" href="#service">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
+            <a class="nav-link js-scroll" onclick="location.href='#section-services'" href="#work">Skills</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll" href="#blog">Blog</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#contact">Contact</a>
+            <a class="nav-link js-scroll" onclick="location.href='#section-contact'" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -79,26 +79,35 @@
   <!--/ Nav End /-->
 
   <!-- / Intro Skew Star / -->
-  <div id="home" class="intro route bg-image" style="background-image: url(img/cover_bg_2.jpg)">
+  <div id="home" class="intro route bg-image" style="position: relative; height: 100vh; width: 100%;">
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="img/v-4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="overlay-itro"></div>
     <div class="intro-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="intro-title mb-4">I am Tushar Raghuwanshi</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">CEO DevFolio,Web Developer,Web Designer,Frontend Developer,Graphic Designer</span><strong class="text-slider"></strong></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+        <div class="table-cell">
+            <div class="container">
+                <p class="display-6 color-d">Hello, world!</p>
+                <h1 class="intro-title mb-4">I am Tushar Raghuwanshi</h1>
+                <p class="intro-subtitle">
+                    <span class="text-slider-items">CEO DevFolio,Web Developer,Web Designer,Frontend Developer,Graphic Designer</span>
+                    <strong class="text-slider"></strong>
+                </p>
+                <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+            </div>
         </div>
-      </div>
     </div>
-    <a href="#portfolio-section" class="mouse-wrap smoothscroll">
-      <span class="mouse">
-        <span class="scroll"></span>
-      </span>
-      <span class="mouse-label">Scroll</span>
-    </a>
 
-  </div>  
+    <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+        <span class="mouse">
+            <span class="scroll"></span>
+        </span>
+        <span class="mouse-label">Scroll</span>
+    </a>
+</div>
   <!-- / Intro Skew End / -->
 
   <!-- portfolio section -->
@@ -220,7 +229,32 @@
 			</div>
 		</div>
 	</section>
+<!-- about me section -->
+<div class="unslate_co--section" id="about-section">
+  <div class="container">
+    
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
+      <span class="gsap-reveal">
+      </span>
+    </div>
+    
 
+    <div class="row mt-5 justify-content-between">
+      <div class="col-lg-7 mb-5 mb-lg-0">
+        <figure class="dotted-bg gsap-reveal-img ">
+          <img src="img/about_me_pic2.jpg" alt="Image" class="img-fluid">
+        </figure>
+      </div>
+      <div class="col-lg-4 pr-lg-5">
+        <h3 class="mb-4 heading-h3"><span class="gsap-reveal">We can make it together</span></h3>
+        <p class="lead gsap-reveal">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there <a href="#">live the blind</a> texts. </p>
+        <p class="mb-4 gsap-reveal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+        <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Download my CV</a></p>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- resume section -->
   <section class="site-section " id="section-resume">
 		<div class="container">
@@ -300,32 +334,6 @@
 		</div>
 	</section> <!-- .section -->
 
-<!-- about me section -->
-<div class="unslate_co--section" id="about-section">
-  <div class="container">
-    
-    <div class="section-heading-wrap text-center mb-5">
-      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
-      <span class="gsap-reveal">
-      </span>
-    </div>
-    
-
-    <div class="row mt-5 justify-content-between">
-      <div class="col-lg-7 mb-5 mb-lg-0">
-        <figure class="dotted-bg gsap-reveal-img ">
-          <img src="img/about_me_pic2.jpg" alt="Image" class="img-fluid">
-        </figure>
-      </div>
-      <div class="col-lg-4 pr-lg-5">
-        <h3 class="mb-4 heading-h3"><span class="gsap-reveal">We can make it together</span></h3>
-        <p class="lead gsap-reveal">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there <a href="#">live the blind</a> texts. </p>
-        <p class="mb-4 gsap-reveal">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-        <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Download my CV</a></p>
-      </div>
-    </div>
-  </div>
-</div>
   <!-- skilss section -->
   <section class="site-section pb-0"  id="section-services">
 		<div class="container">
